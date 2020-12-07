@@ -1,7 +1,7 @@
 import sys
 import feedparser
 
-NewsFeed = feedparser.parse("https://timesofindia.indiatimes.com/rssfeedstopstories.cms")
+NewsFeed = feedparser.parse(str(sys.argv[1]))
 
 descp = NewsFeed.feed.subtitle
 entry=NewsFeed.feed.title_detail.value
